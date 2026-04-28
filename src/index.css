@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-zen-cream: var(--bg-primary);
+  --color-zen-charcoal: var(--text-primary);
+  --color-zen-accent: var(--accent-base);
+  --color-zen-muted: var(--text-muted);
+  --color-zen-divider: var(--divider-base);
+}
+
+:root {
+  --bg-primary: #FDFCF8;
+  --text-primary: #1A1A1A;
+  --accent-base: #F2EFE9;
+  --text-muted: rgba(26, 26, 26, 0.6);
+  --divider-base: rgba(26, 26, 26, 0.1);
+}
+
+.dark {
+  --bg-primary: #1A1A1A;
+  --text-primary: #FDFCF8;
+  --accent-base: #242424;
+  --text-muted: rgba(253, 252, 248, 0.6);
+  --divider-base: rgba(253, 252, 248, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-zen-cream text-zen-charcoal transition-colors duration-500 selection:bg-zen-charcoal/10 selection:text-zen-charcoal;
+    font-feature-settings: "ss01", "ss02", "cv01";
+  }
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.staggered-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+}

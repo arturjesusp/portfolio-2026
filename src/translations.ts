@@ -167,8 +167,8 @@ export const translations: Record<Language, TranslationContent> = {
       },
       {
         title: "CEFRA Website Redesign",
-        description: "Reimagining the digital presence for CEFRA through high-precision UI systems and improved user flow orchestration.",
-        link: "https://arturjesus.webflow.io/portfolio/website-redesign-for-cefra",
+        description: "Architected a complete digital transformation for CEFRA, upgrading their legacy site to a high-performance, responsive web application.",
+        link: "https://cefra-fertility-a.vercel.app/",
         index: "06"
       }
     ],

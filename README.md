@@ -3,9 +3,6 @@
   <p><strong>Bilingual Strategist specializing in Digital Infrastructure & Global Business Management</strong></p>
 </div>
 
----
-# Run and deploy your AI Studio app
-
 ## 🌐 Overview
 Professional portfolio of a results-driven **Digital Architect** based in Toronto. This project showcases the intersection of **International Business** strategy, **Logistics** coordination, and modern **Web Development**.
 This contains everything you need to run your app locally.

@@ -1,23 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <style>
-    @keyframes pulse-opacity {
-      0% { opacity: 0.7; transform: scale(0.95); }
-      50% { opacity: 1; transform: scale(1.05); }
-      100% { opacity: 0.7; transform: scale(0.95); }
+    @keyframes breathe {
+      0%, 100% { fill: #000000; transform: scale(0.9); }
+      50% { fill: #ffffff; transform: scale(1.1); }
     }
     .letter-a {
-      fill: #1A1A1A;
       font-family: 'Space Grotesk', system-ui, sans-serif;
       font-size: 80px;
       font-weight: 300;
       text-anchor: middle;
       dominant-baseline: central;
-      animation: pulse-opacity 3s infinite ease-in-out;
       transform-origin: center;
+      animation: breathe 4s infinite ease-in-out;
     }
-    @media (prefers-color-scheme: dark) {
-      .letter-a { fill: #FDFCF8; }
+    /* Añadiendo un fondo sutil semitransparente circular para asegurar que siempre haya contraste 
+       sin importar el tema del navegador. */
+    .bg {
+      fill: #808080;
+      opacity: 0.15;
     }
   </style>
-  <text x="50" y="50" class="letter-a">A</text>
+  <circle cx="50" cy="50" r="50" class="bg" />
+  <text x="50" y="54" class="letter-a">A</text>
 </svg>

@@ -154,13 +154,6 @@ export default function App() {
 
           <div className="flex gap-4 md:gap-12 text-[10px] tracking-[0.2em] font-bold uppercase">
             <a 
-              href="https://www.linkedin.com/in/arturjesusp/" 
-              target="_blank" 
-              className="hover:opacity-40 transition-opacity"
-            >
-              {t.nav.linkedin}
-            </a>
-            <a 
               href="mailto:arturjesusp@gmail.com" 
               className="hover:opacity-40 transition-opacity"
             >

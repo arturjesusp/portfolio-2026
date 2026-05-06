@@ -62,7 +62,7 @@ const ProjectCard = ({ title, description, summary, link, index, alwaysExpanded,
           {isLong && (
             <button 
               onClick={() => setIsExpanded(!isExpanded)}
-              className="mt-4 text-zen-charcoal/40 hover:text-zen-charcoal transition-colors flex items-center gap-1"
+              className="mt-4 text-zen-charcoal/40 hover:text-zen-charcoal transition-all duration-500 flex items-center gap-1"
               aria-label={isExpanded ? t.sections.collapse : t.sections.readMore}
             >
               {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -76,13 +76,13 @@ const ProjectCard = ({ title, description, summary, link, index, alwaysExpanded,
             href={link} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-xs uppercase tracking-[0.2em] font-semibold hover:translate-x-2 transition-transform inline-flex items-center gap-2"
+            className="text-xs uppercase tracking-[0.2em] font-semibold hover:translate-x-2 transition-all duration-500 inline-flex items-center gap-2"
           >
             {t.sections.viewProject} <ArrowUpRight size={14} />
           </a>
         </div>
       </div>
-      <div className="absolute -bottom-16 -right-16 w-64 h-64 border-[1px] border-zen-charcoal/5 rounded-full pointer-events-none group-hover:scale-110 transition-transform duration-1000"></div>
+      <div className="absolute -bottom-16 -right-16 w-64 h-64 border-[1px] border-zen-charcoal/5 rounded-full pointer-events-none group-hover:scale-110 transition-all duration-1000"></div>
     </motion.div>
   );
 };
@@ -130,7 +130,7 @@ export default function App() {
           <div className="flex items-center gap-3 md:gap-4 border-r border-zen-divider pr-4 md:pr-12">
             <button 
               onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-              className="opacity-60 hover:opacity-100 transition-opacity"
+              className="opacity-60 hover:opacity-100 transition-all duration-500"
               aria-label="Toggle Theme"
             >
               {theme === 'light' ? <Moon size={14} /> : <Sun size={14} />}
@@ -138,14 +138,14 @@ export default function App() {
             <div className="flex gap-2 text-[10px] tracking-widest font-bold items-center">
               <button 
                 onClick={() => setLang('en')}
-                className={`transition-opacity ${lang === 'en' ? 'opacity-100' : 'opacity-30 hover:opacity-60'}`}
+                className={`transition-all duration-500 ${lang === 'en' ? 'opacity-100' : 'opacity-30 hover:opacity-60'}`}
               >
                 EN
               </button>
               <span className="opacity-20">|</span>
               <button 
                 onClick={() => setLang('es')}
-                className={`transition-opacity ${lang === 'es' ? 'opacity-100' : 'opacity-30 hover:opacity-60'}`}
+                className={`transition-all duration-500 ${lang === 'es' ? 'opacity-100' : 'opacity-30 hover:opacity-60'}`}
               >
                 ES
               </button>
@@ -154,15 +154,8 @@ export default function App() {
 
           <div className="flex gap-4 md:gap-12 text-[10px] tracking-[0.2em] font-bold uppercase">
             <a 
-              href="https://www.linkedin.com/in/arturjesusp/" 
-              target="_blank" 
-              className="hover:opacity-40 transition-opacity"
-            >
-              {t.nav.linkedin}
-            </a>
-            <a 
               href="mailto:arturjesusp@gmail.com" 
-              className="hover:opacity-40 transition-opacity"
+              className="hover:opacity-40 transition-all duration-500"
             >
               {t.nav.email}
             </a>

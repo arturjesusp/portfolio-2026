@@ -9,7 +9,7 @@ const ExperienceItem = ({ role, company, period, description }: { role: string; 
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-    className="border-t border-zen-divider pt-6 mb-12"
+    className="border-t border-zen-divider pt-6 mb-12 transition-colors duration-500"
     id={`exp-${company.toLowerCase().replace(/\s+/g, '-')}`}
   >
     <div className="flex flex-col gap-1">
@@ -34,7 +34,7 @@ const ProjectCard = ({ title, description, summary, link, index, alwaysExpanded,
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-      className="bg-zen-accent/30 p-8 md:p-16 border border-zen-charcoal/5 shadow-sm relative group mb-12 last:mb-0 overflow-hidden"
+      className="bg-zen-accent/30 p-8 md:p-16 border border-zen-charcoal/5 transition-colors duration-500 shadow-sm relative group mb-12 last:mb-0 overflow-hidden"
       id={`project-${index}`}
     >
       <div className="absolute top-6 right-8 text-[10px] tracking-widest uppercase opacity-30 italic">{index} / {t.sections.featured}</div>
@@ -114,9 +114,9 @@ export default function App() {
   const t = translations[lang];
 
   return (
-    <div className="min-h-screen bg-zen-cream font-sans selection:bg-zen-charcoal/10 selection:text-zen-charcoal flex flex-col pt-24 px-8 md:px-12 lg:px-24 scroll-smooth w-full max-w-screen-xl mx-auto">
+    <div className="min-h-screen font-sans transition-colors duration-500 selection:bg-zen-charcoal/10 selection:text-zen-charcoal flex flex-col pt-24 px-8 md:px-12 lg:px-24 scroll-smooth w-full max-w-screen-xl mx-auto">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-zen-cream/80 backdrop-blur-md px-8 md:px-12 lg:px-24 py-6 md:py-8 flex flex-wrap justify-between items-center gap-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-zen-cream/80 transition-colors duration-500 backdrop-blur-md px-8 md:px-12 lg:px-24 py-6 md:py-8 flex flex-wrap justify-between items-center gap-4">
         <motion.div 
           initial={{ opacity: 0 }} 
           animate={{ opacity: 1 }} 
@@ -127,7 +127,7 @@ export default function App() {
         
         <div className="flex items-center gap-4 md:gap-12">
           {/* Toggles */}
-          <div className="flex items-center gap-3 md:gap-4 border-r border-zen-divider pr-4 md:pr-12">
+          <div className="flex items-center gap-3 md:gap-4 border-r border-zen-divider transition-colors duration-500 pr-4 md:pr-12">
             <button 
               onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
               className="opacity-60 hover:opacity-100 transition-all duration-500"
@@ -274,7 +274,7 @@ export default function App() {
       </section>
 
       {/* Bottom Label Section (New Footer Style) */}
-      <footer className="pt-8 pb-16 border-t border-zen-divider flex flex-col md:flex-row justify-between items-baseline gap-4">
+      <footer className="pt-8 pb-16 border-t border-zen-divider transition-colors duration-500 flex flex-col md:flex-row justify-between items-baseline gap-4">
         <div className="text-[10px] tracking-[0.2em] uppercase opacity-40">
           {t.footer.location}
         </div>

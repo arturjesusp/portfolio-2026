@@ -236,10 +236,10 @@ export default function App() {
                       }}
                       viewport={{ once: true }}
                       transition={{ 
-                        delay: i * 0.05,
-                        backgroundColor: { duration: 0.3 },
-                        color: { duration: 0.3 },
-                        scale: { type: "spring", stiffness: 300, damping: 20 }
+                        opacity: { delay: i * 0.05 },
+                        backgroundColor: { duration: 0.15 },
+                        color: { duration: 0.15 },
+                        scale: { type: "spring", stiffness: 400, damping: 25 }
                       }}
                       className="text-[10px] bg-[#f4f1ea] border border-stone-200 px-3 py-1 rounded-full text-[#1A1A1A] uppercase tracking-widest font-bold cursor-default"
                     >

@@ -20,9 +20,6 @@ export default function Chatbot({ buttonText, lang = 'en' }: { buttonText: strin
   
   const messagesEndRef = useRef<HTMLDivElement>(null);
   
-  // Create Gemini instance
-  const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-  
   const chatModel = 'gemini-3-flash-preview';
   
   const t = {
@@ -122,6 +119,7 @@ Reglas de Oro:
         parts: [{ text: userMessage.text }]
       });
 
+      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
       const response = await ai.models.generateContent({
         model: chatModel,
         contents: history as any,

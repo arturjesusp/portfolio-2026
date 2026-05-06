@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Linkedin, Mail, ArrowUpRight, ChevronDown, ChevronUp, Sun, Moon } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { translations, Language } from './translations';
+import Chatbot from './components/Chatbot';
 
 const ExperienceItem = ({ role, company, period, description }: { role: string; company: string; period: string; description: string; key?: string | number }) => (
   <motion.div 
@@ -153,12 +154,7 @@ export default function App() {
           </div>
 
           <div className="flex gap-4 md:gap-12 text-[10px] tracking-[0.2em] font-bold uppercase">
-            <a 
-              href="mailto:arturjesusp@gmail.com" 
-              className="hover:opacity-40 transition-all duration-500"
-            >
-              {t.nav.email}
-            </a>
+            <Chatbot buttonText={t.nav.email} lang={lang} />
           </div>
         </div>
       </nav>

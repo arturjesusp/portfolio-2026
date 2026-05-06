@@ -181,7 +181,8 @@ export const translations: Record<Language, TranslationContent> = {
       'SEO',
       'SEM',
       'Email Marketing',
-      'Multilingual (EN, ES, FR, JA)'
+      'Multilingual (EN, ES, FR, JA)',
+      'APIs Integration'
     ],
     footer: {
       location: "Toronto — Canada",
@@ -321,7 +322,8 @@ export const translations: Record<Language, TranslationContent> = {
       'SEO',
       'SEM',
       'Email Marketing',
-      'Multilingüe (EN, ES, FR, JA)'
+      'Multilingüe (EN, ES, FR, JA)',
+      'Integración de APIs'
     ],
     footer: {
       location: "Toronto — Canadá",

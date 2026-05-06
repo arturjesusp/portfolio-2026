@@ -22,20 +22,6 @@ Inspired by **Sanzo Wada’s** color theory and the Japanese principles of **Dan
 **View Portfolio:** [portfolio-arturo-perez.vercel.app](https://portfolio-arturo-perez.vercel.app/)
 **Prerequisites:**  Node.js
 
----
-
-## 📦 Local Development
-1. **Clone the repository:**
-   `git clone https://github.com/arturjesusp/portfolio-2026.git`
-2. **Install dependencies:**
-1. Install dependencies:
-   `npm install`
-3. **Run development server:**
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-
----
 <div align="center">
   <p>© 2026 Arturo Perez. Built with precision and a Zen-inspired aesthetic.</p>
 </div>
